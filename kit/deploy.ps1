@@ -121,6 +121,10 @@ function Get-WorkflowModelRefs([string]$WorkflowsDir) {
 }
 
 function Show-ModelCheck([string]$ModelsDir, [string]$WorkflowsDir) {
+    if (-not (Test-Path $WorkflowsDir)) {
+        Warn ("工作流目录还不存在（{0}），先完整跑一次部署" -f $WorkflowsDir)
+        return
+    }
     $present = @{}
     if (Test-Path $ModelsDir) {
         Get-ChildItem $ModelsDir -Recurse -File | ForEach-Object {
