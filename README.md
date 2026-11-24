@@ -35,6 +35,37 @@ ComfyUI/custom_nodes/save-near-input/
 
 重启 ComfyUI，节点出现在 `image` 分类下。
 
+## 部署到新机器
+
+`kit/` 里是整套工作区的重建脚本：模型清单、Desktop 配置模板、四个图片脚本。
+
+```powershell
+git clone https://github.com/GithubHovey/Comfyui_nodes.git C:\cn
+C:\cn\kit\一键部署.bat
+```
+
+脚本会找到本机的 ComfyUI Desktop 实例，建共享目录、拉 `Comfyui_flows` 的工作流、
+把 `roco-scene` 和 `kit/tools` 铺到位、改写 `settings.json`，最后按 `kit/models.json`
+下载 20 个模型（共 78 GB）。中途断网直接重跑，会接着下。
+
+| 参数 | 作用 |
+|---|---|
+| `-Root D:\Comfy-Desktop` | 模型、输出、工具放哪；不给就交互问一次 |
+| `-Check` | 只体检：哪些模型缺、每个缺件影响哪些工作流 |
+| `-SkipModels` | 只搞配置和代码，不下模型 |
+| `-DryRun` | 打印计划，不落盘 |
+
+前提：ComfyUI Desktop 已安装并启动过一次（脚本装不了 GUI）。模型从 ModelScope
+优先、hf-mirror 回落，需要能上网。
+
+部署完那一份 clone 就可以删了。以后更新在节点目录里做：
+
+```powershell
+cd ComfyUI-Installs\ComfyUI\ComfyUI\custom_nodes\save-near-input
+git pull
+kit\一键部署.bat -SkipModels      :: 只更新节点、工具和配置，不动模型
+```
+
 ## 说明
 
 ComfyUI 的 `Load Image` 只从 `input` 目录读取，拖进去的图片会被复制到那里，

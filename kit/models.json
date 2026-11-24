@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "note": "ComfyUI-Shared\\models 下的模型清单。path 是落地路径，size 是字节数（用来跳过已下载好的文件），urls 按顺序尝试：先在 ModelScope，失败再走 hf-mirror。",
+  "totalBytes": 83701444609,
+  "files": [
+    {
+      "path": "diffusion_models/qwen_image_fp8_e4m3fn.safetensors",
+      "size": 20430635136,
+      "sha256": "98763a127701eb6fb59096f7742cb3aa7d64ed510b9f4e882d8351f8176e3ce3",
+      "used_by": ["Qwen-Image 文生图"],
+      "urls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image_ComfyUI/resolve/master/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors",
+        "https://hf-mirror.com/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors"
+      ]
+    },
+    {
+      "path": "diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+      "size": 20430698424,
+      "used_by": ["四视图", "洛克王国"],
+      "urls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/master/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors",
+        "https://hf-mirror.com/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors"
+      ]
+    },
+    {
+      "path": "diffusion_models/flux1-kontext-dev-fp8-e4m3fn.safetensors",
+      "size": 11904640136,
+      "altSizes": [11901540704],
+      "note": "源文件叫 flux1-dev-kontext_fp8_scaled.safetensors，落地时改成工作流里引用的名字。altSizes 是本机那份早期 fp8 包的大小，同样是 fp8，不用为了对齐字节数重下 11 GB",
+      "used_by": ["一键转手办 kontext"],
+      "urls": [
+        "https://modelscope.cn/models/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/master/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors",
+        "https://hf-mirror.com/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors"
+      ]
+    },
+    {
+      "path": "text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "size": 9384670680,
+      "sha256": "cb5636d852a0ea6a9075ab1bef496c0db7aef13c02350571e388aea959c5c0b4",
+      "used_by": ["四视图", "洛克王国", "Qwen-Image 文生图"],
+      "urls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image_ComfyUI/resolve/master/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "https://hf-mirror.com/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"
+      ]
+    },
+    {
+      "path": "checkpoints/sd_xl_base_1.0.safetensors",
+      "size": 6938078334,
+      "used_by": ["SDXL 文生图", "手办化 方法B"],
+      "urls": [
+        "https://modelscope.cn/models/stabilityai/stable-diffusion-xl-base-1.0/resolve/master/sd_xl_base_1.0.safetensors",
+        "https://hf-mirror.com/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
+      ]
+    },
+    {
+      "path": "text_encoders/t5xxl_fp8_e4m3fn.safetensors",
+      "size": 4893934904,
+      "used_by": ["SDXL 文生图", "手办化 路线A"],
+      "urls": [
+        "https://modelscope.cn/models/comfyanonymous/flux_text_encoders/resolve/master/t5xxl_fp8_e4m3fn.safetensors",
+        "https://hf-mirror.com/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+      ]
+    },
+    {
+      "path": "controlnet/controlnet-union-sdxl-1.0.safetensors",
+      "size": 2512030408,
+      "note": "源文件叫 diffusion_pytorch_model.safetensors，ModelScope 上没有，只能走 hf-mirror",
+      "used_by": ["手办化 方法B ControlNet"],
+      "urls": [
+        "https://hf-mirror.com/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+      ]
+    },
+    {
+      "path": "loras/Qwen-Image-Lightning-8steps-V1.1.safetensors",
+      "size": 1698951104,
+      "used_by": ["Qwen-Image 文生图（加速）"],
+      "urls": [
+        "https://modelscope.cn/models/lightx2v/Qwen-Image-Lightning/resolve/master/Qwen-Image-Lightning-8steps-V1.1.safetensors",
+        "https://hf-mirror.com/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors"
+      ]
+    },
+    {
+      "path": "clip_vision/dino_v3_vit_h.safetensors",
+      "size": 1681247696,
+      "used_by": ["3D 生成 TripoSplat"],
+      "urls": [
+        "https://hf-mirror.com/VAST-AI/TripoSplat/resolve/main/clip_vision/dino_v3_vit_h.safetensors"
+      ]
+    },
+    {
+      "path": "diffusion_models/triposplat_fp16.safetensors",
+      "size": 741106994,
+      "used_by": ["3D 生成 TripoSplat"],
+      "urls": [
+        "https://hf-mirror.com/VAST-AI/TripoSplat/resolve/main/diffusion_models/triposplat_fp16.safetensors"
+      ]
+    },
+    {
+      "path": "vae/triposplat_vae_decoder_fp16.safetensors",
+      "size": 576148442,
+      "used_by": ["3D 生成 TripoSplat"],
+      "urls": [
+        "https://hf-mirror.com/VAST-AI/TripoSplat/resolve/main/vae/triposplat_vae_decoder_fp16.safetensors"
+      ]
+    },
+    {
+      "path": "loras/qwen-edit-giant-figurine.safetensors",
+      "size": 472047184,
+      "used_by": ["巨型手办质感"],
+      "urls": [
+        "https://hf-mirror.com/starsfriday/Qwen-Image-Edit-Giant-Figurine/resolve/main/qwen-edit-giant-figurine.safetensors"
+      ]
+    },
+    {
+      "path": "background_removal/birefnet.safetensors",
+      "size": 444473596,
+      "used_by": ["抠图 / 洛克王国"],
+      "urls": [
+        "https://hf-mirror.com/VAST-AI/TripoSplat/resolve/main/background_removal/birefnet.safetensors"
+      ]
+    },
+    {
+      "path": "vae/flux2-vae.safetensors",
+      "size": 336213556,
+      "used_by": ["3D 生成 TripoSplat"],
+      "urls": [
+        "https://hf-mirror.com/VAST-AI/TripoSplat/resolve/main/vae/flux2-vae.safetensors"
+      ]
+    },
+    {
+      "path": "vae/ae.safetensors",
+      "size": 335304388,
+      "used_by": ["FLUX Kontext", "手办化 路线A"],
+      "urls": [
+        "https://modelscope.cn/models/black-forest-labs/FLUX.1-schnell/resolve/master/ae.safetensors",
+        "https://hf-mirror.com/black-forest-labs/FLUX.1-schnell/resolve/main/ae.safetensors"
+      ]
+    },
+    {
+      "path": "vae/qwen_image_vae.safetensors",
+      "size": 253806246,
+      "sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+      "used_by": ["四视图", "洛克王国", "Qwen-Image 文生图"],
+      "urls": [
+        "https://modelscope.cn/models/Comfy-Org/Qwen-Image_ComfyUI/resolve/master/split_files/vae/qwen_image_vae.safetensors",
+        "https://hf-mirror.com/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+      ]
+    },
+    {
+      "path": "loras/Qwen-Edit-2509-Multiple-angles.safetensors",
+      "size": 236117032,
+      "note": "源文件叫 镜头转换.safetensors，落地时改名",
+      "used_by": ["四视图", "Qwen-Image-Edit-2509 多角度"],
+      "urls": [
+        "https://modelscope.cn/models/dx8152/Qwen-Edit-2509-Multiple-angles/resolve/master/%E9%95%9C%E5%A4%B4%E8%BD%AC%E6%8D%A2.safetensors",
+        "https://hf-mirror.com/dx8152/Qwen-Edit-2509-Multiple-angles/resolve/main/%E9%95%9C%E5%A4%B4%E8%BD%AC%E6%8D%A2.safetensors"
+      ]
+    },
+    {
+      "path": "text_encoders/clip_l.safetensors",
+      "size": 246144152,
+      "used_by": ["SDXL 文生图", "手办化 路线A"],
+      "urls": [
+        "https://modelscope.cn/models/comfyanonymous/flux_text_encoders/resolve/master/clip_l.safetensors",
+        "https://hf-mirror.com/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+      ]
+    },
+    {
+      "path": "loras/nano-banana-figurine.safetensors",
+      "size": 118155208,
+      "note": "源文件叫 20.safetensors，只在 ModelScope 上，没有镜像可回落",
+      "used_by": ["四视图", "洛克王国", "游戏截图到手办"],
+      "urls": [
+        "https://modelscope.cn/models/codexsharp/nano-banana/resolve/master/20.safetensors"
+      ]
+    },
+    {
+      "path": "upscale_models/RealESRGAN_x4plus.pth",
+      "size": 67040989,
+      "note": "源文件叫 RealESRGAN_x4.pth",
+      "used_by": ["放大"],
+      "urls": [
+        "https://hf-mirror.com/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+      ]
+    }
+  ]
+}
